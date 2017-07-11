@@ -26,6 +26,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -106,7 +107,7 @@ public class DeploymentInfo implements Cloneable {
     private AuthenticationMode authenticationMode = AuthenticationMode.PRO_ACTIVE;
     private ExceptionHandler exceptionHandler;
     private final Map<String, ServletInfo> servlets = new HashMap<>();
-    private final Map<String, FilterInfo> filters = new HashMap<>();
+    private final Map<String, FilterInfo> filters = new LinkedHashMap<>();
     private final List<FilterMappingInfo> filterServletNameMappings = new ArrayList<>();
     private final List<FilterMappingInfo> filterUrlMappings = new ArrayList<>();
     private final List<ListenerInfo> listeners = new ArrayList<>();
